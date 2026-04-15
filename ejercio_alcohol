@@ -1,0 +1,17 @@
+print("Calculo de gastos de la fiesta")
+comida = float(input("Ingrese el total de comida: "))
+bebida_sin = float(input("Ingrese el total de bebidas sin alcohol: "))
+bebida_con = float(input("Ingrese el total de bebidas con alcohol: "))
+invitados = int(input("Ingrese la cantidad de invitados: "))
+con_alcohol = int(input("Ingrese cuantos invitados tomaron alcohol: "))
+
+costo_base = (comida + bebida_sin) / invitados
+
+print("Cada invitado debe pagar:", costo_base)
+
+if con_alcohol > 0:
+    costo_extra = bebida_con / con_alcohol
+    print("Extra por alcohol:", costo_extra)
+    print("Total para los que tomaron alcohol:", costo_base + costo_extra)
+else:
+    print("No hubo consumo de alcohol")
