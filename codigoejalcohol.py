@@ -12,3 +12,5 @@ except ZeroDivisionError:
 else:
     print("El importe extra por el consmo de alcohol: ", extraCuotaBorrachos)
 print("cada invitado debe pagar: ", cuotaInvitados)
+
+#hola estoy probando mi github este es un cambio pedorro para ver si me anda la ssh key
