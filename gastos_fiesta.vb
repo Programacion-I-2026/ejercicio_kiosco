@@ -9,11 +9,18 @@ total_de_bebidas_ca = int(input("Ingrese el total de gastos en bebidas alcoholic
 cantidad_de_invitados = int(input("Ingrese la cantidad de invitados: "))
 cantidad_de_invitados_ca = int(input("Ingrese la cantidad de invitados que consumieron bebidas alcoholicas: "))
 
-#entrada sin alchol y comida 
-total = total_de_comida + total_de_bebidas_sa
-costo_deT_Sa = total / cantidad_de_invitados
-#entrada con alchol
-costo_extra = total_de_bebidas_ca / cantidad_de_invitados_ca
+#calculo del costo total por persona sin eel extra por tomar alchol
 
+costo_t = (total_de_comida + total_de_bebidas_sa) / cantidad_de_invitados
+print("El costo total de al entrada es: ", costo_t)
 
-print("El costo total de al entrada es: ", costo_deT_Sa , "el extra por beber achol es:", costo_extra)
+#costo extra por tomar alchol (try por si son 0 personas)
+try:
+
+    costo_extra = total_de_bebidas_ca / cantidad_de_invitados_ca
+except ZeroDivisionError:
+    costo_extra = 0
+    print("No hay personas que tomen alchol")
+else:
+    print("el extra por beber achol es:", costo_extra)
+
