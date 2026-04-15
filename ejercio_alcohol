@@ -1,0 +1,13 @@
+gasto_comida = int(input("Ingrese el total de la comida: "))
+gasto_sin_alcohol = int(input("Ingrese el total de bebidas sin alcohol: "))
+gasto_alcohol = int(input("Ingrese el total de bebidas con alcohol: "))
+total_invitados = int(input("Ingrese la cantidad total de invitados: "))
+invitados_con_alcohol = int(input("Ingrese la cantidad de invitados que consumen alcohol: "))
+
+costo_comida = gasto_comida / total_invitados
+costo_sin_alcohol = gasto_sin_alcohol / total_invitados
+costo_base = costo_comida + costo_sin_alcohol
+costo_alcohol = gasto_alcohol / invitados_con_alcohol
+
+print("El importe que debe abonar cada invitado sin alcohol es de:", costo_base)
+print("El importe que debe abonar cada invitado con alcohol es de:", costo_base + costo_alcohol)
