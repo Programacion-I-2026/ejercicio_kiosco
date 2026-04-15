@@ -4,6 +4,11 @@ precioBebidaCA = int(input("ingrese total de la bebida con alcohol: "))
 totalInvitados = int(input("ingrese total de invitados: "))
 totalBorrachos = int(input("ingrese total de invitados que beben alcohol: "))
 cuotaInvitados = ((precioComida/totalInvitados)+(precioBebidaSA/totalInvitados))
-extraCuotaBorrachos = precioBebidaCA/totalBorrachos
+try :
+    extraCuotaBorrachos = precioBebidaCA/totalBorrachos
+except ZeroDivisionError:
+    extraCuotaBorrachos = 0
+    print("No hay personas que consuman alcohol")
+else:
+    print("El importe extra por el consmo de alcohol: ", extraCuotaBorrachos)
 print("cada invitado debe pagar: ", cuotaInvitados)
-print("cada invitado que tome alcohol debe pagar un extra de: ", extraCuotaBorrachos)
