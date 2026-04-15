@@ -1,3 +1,5 @@
+# Corregido - Gómez
+
 precio = 50
 cantidad = 4
 total = precio * cantidad 
