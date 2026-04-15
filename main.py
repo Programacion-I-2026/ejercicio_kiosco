@@ -2,13 +2,14 @@ print("\n🤩 Calculadora de todos los costos de la fiesta🤩\n")
 
 
 #TOTAL DE INVITADOS
-total_estudiantes=int(input("Ingrese la cantidad de invitados que asistiran: "))                 
-print("\n\tAsistiran", total_estudiantes,"a la fiesta\n\t")
- 
- 
- 
- #Cantidad de estudiantes que NO tomaran alcohol
-estudiantes1=int(input("¿Cuantos invitados tomaran bebidas SIN alcohol?: "))                    
+try:
+    total_estudiantes=int(input("Ingrese la cantidad de invitados que asistiran: "))                 
+    print("\n\tAsistiran", total_estudiantes,"a la fiesta\n\t")
+    #Cantidad de estudiantes que NO tomaran alcohol
+    estudiantes1=int(input("¿Cuantos invitados tomaran bebidas SIN alcohol?: "))
+
+except ValueError:
+    print("\n\tERROR. No se admiten caracteres\n\t")
 
 
 if estudiantes1<=total_estudiantes:
@@ -107,8 +108,10 @@ print("\n\t\n\t")
 
 #COSTO EXTRA QUE DEBERA PAGAR CADA INIVITADO QUE TOME ALCOHOL
 
-costo_extra=abs(abono_individual1-abono_individual2)
-print("El costo extra que debera abonar cada estudiante que beba Alcohol son", costo_extra, "pesos")
+extra=abs(abono_individual1-abono_individual2)
+print("El extra que deberan abonar los que tomaran alcohol son", extra, "pesos")
+print("\n\t\n\t")
+
 
 
 
